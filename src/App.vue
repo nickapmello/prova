@@ -1,16 +1,6 @@
-<!-- src/App.vue -->
 <template>
   <div id="app">
-    <header>
-      <h1>Lista de Compras do Supermercado</h1>
-      <nav>
-        <router-link to="/" exact>Home</router-link>
-        <router-link to="/add">Adicionar Item</router-link>
-        <router-link to="/list">Listar Itens</router-link>
-        <router-link to="/suggestions">Sugestões de Itens</router-link>
-      </nav>
-    </header>
-    <router-view></router-view>
+    <router-view />
   </div>
 </template>
 
@@ -27,25 +17,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-header {
-  background-color: #42b983;
-  padding: 20px;
-  color: white;
-}
-nav {
-  margin-top: 10px;
-}
-nav a {
-  margin: 0 15px;
-  color: white;
-  text-decoration: none;
-}
-nav a.router-link-active {
-  font-weight: bold;
-  color: #fff;
-  background-color: #369a7c;
-  padding: 5px 10px;
-  border-radius: 5px;
+  background-color: #f9f9f9;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>

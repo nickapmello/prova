@@ -1,13 +1,13 @@
-<!-- src/components/SuggestionsPage.vue -->
 <template>
-  <div>
-    <h2>Sugestões de Itens</h2>
+  <div class="page-container">
+    <h1 class="page-title">Sugestões de Itens</h1>
     <ul>
       <li v-for="(suggestion, index) in suggestions" :key="index">
         {{ suggestion }}
         <button @click="addItem(suggestion)">Adicionar</button>
       </li>
     </ul>
+    <router-link to="/" class="back-button">Voltar</router-link>
   </div>
 </template>
 
@@ -31,6 +31,23 @@ export default {
 </script>
 
 <style scoped>
+.page-container {
+  width: 90%;
+  max-width: 600px;
+  background: #fff;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 20px auto;
+}
+.page-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
 ul {
   list-style: none;
   padding: 0;
@@ -48,6 +65,19 @@ button {
   border-radius: 5px;
 }
 button:hover {
+  background-color: #369a7c;
+}
+.back-button {
+  margin-top: 20px;
+  background-color: #42b983;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.back-button:hover {
   background-color: #369a7c;
 }
 </style>
